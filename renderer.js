@@ -5,14 +5,14 @@ const app = require('express')();
 const shell = require('electron').shell;
 
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "zxfzxfzxfz.spotilocal.com:4390");
+    res.header("Access-Control-Allow-Origin", "zxfzxfzxfz.spotilocal.com:30010");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.header("Access-Control-Allow-Headers", "Content-Type");
     res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
     next();
 });
 
-app.listen(4390);
+app.listen(30010);
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/client.html');
